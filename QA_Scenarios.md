@@ -22,27 +22,21 @@ Conversion notes:
 ----->
 
 
-QA scenario (Security): When a user tries to log in the server, the application shall connect to the server through a secure channel (e.g. TLS) to prevent the user's password from hackers.
+#### QA scenario (Security): When a user tries to log in the server, the application shall connect to the server through a secure channel (e.g. TLS) to prevent the user's password from hackers.
+- Stimulus: Sniff an user's password
+- Source of stimulus: Hacker
+- Artifact: Login Subsystem
+- Environment/context: Try to log in
+- Response: The hacker cannot sniff the user's password.
+- Response measure: The user's password is encrypted through some encryption algorithm.
 
-
-
-* Stimulus: Sniff an user's password
-* Source of stimulus: Hacker
-* Artifact: Login Subsystem
-* Environment/context: Try to log in
-* Response: The hacker cannot sniff the user's password.
-* Response measure: The user's password is encrypted through some encryption algorithm.
-
-QA scenario (Usability): To add a contact to the list, the application shall provide search filters, such as last name, first name, address, e-mail or contact identifier.
-
-
-
-* Stimulus: Search a user
-* Source of stimulus: User
-* Artifact: The list of user
-* Environment/context: Add a contact to the list
-* Response: The contact is added to the list successfully.
-* Response measure: A user can be searched by last name, first name, address, e-mail, or contact identifier.
+#### QA scenario (Usability): To add a contact to the list, the application shall provide search filters, such as last name, first name, address, e-mail or contact identifier.
+- Stimulus: Search a user
+- Source of stimulus: User
+- Artifact: The list of user
+- Environment/context: Add a contact to the list
+- Response: The contact is added to the list successfully.
+- Response measure: A user can be searched by last name, first name, address, e-mail, or contact identifier.
 
 QA scenario (Performance): During a call, the application shall provide low latency communication. The latency shall be within 300ms and the jitter shall be within 300ms, so that the user cannot notice any disconnection.
 
